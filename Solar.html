@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solar Cooking Journey - Clean Energy from Waste</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .step-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+        
+        #step-indicator .step-dot.active {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <h1 class="text-3xl font-bold text-emerald-700 text-center md:text-left">
+                    ♻️ Solar Cooking Journey
+                </h1>
+                <nav class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6">
+                        <li><a href="#overview" class="text-emerald-600 hover:text-emerald-800 font-medium">Overview</a></li>
+                        <li><a href="#steps" class="text-emerald-600 hover:text-emerald-800 font-medium">Steps</a></li>
+                        <li><a href="#benefits" class="text-emerald-600 hover:text-emerald-800 font-medium">Benefits</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Overview Section -->
+        <section id="overview" class="mb-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-emerald-800 mb-4">Transform Waste into Clean Cooking</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Discover how to build a solar cooker from household waste materials and harness the power of the sun to cook delicious meals while reducing your environmental impact.
+                </p>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                        <span class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full font-medium flex items-center">
+                            ♻️ Household Waste
+                        </span>
+                        <span class="text-gray-400 font-bold text-xl">→</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium flex items-center">
+                            🏗️ Build Cooker
+                        </span>
+                        <span class="text-gray-400 font-bold text-xl">→</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium flex items-center">
+                            ☀️ Harness Sunlight
+                        </span>
+                        <span class="text-gray-400 font-bold text-xl">→</span>
+                        <span class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-medium flex items-center">
+                            🍲 Cook Food
+                        </span>
+                        <span class="text-gray-400 font-bold text-xl">→</span>
+                        <span class="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-medium flex items-center">
+                            🌍 Clean Energy
+                        </span>
+                    </div>
+                    <button onclick="scrollToSteps()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-full transition-colors">
+                        Start the Journey
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Indicator -->
+        <section id="step-indicator" class="mb-12">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="step-dot w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold active">1</div>
+                    <div class="step-dot w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">2</div>
+                    <div class="step-dot w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">3</div>
+                    <div class="step-dot w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">4</div>
+                    <div class="step-dot w-8 h-8 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold">5</div>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 20%"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="mb-16">
+            <h2 class="text-3xl font-bold text-emerald-800 text-center mb-10">The Solar Cooking Process</h2>
+            
+            <!-- Step 1 -->
+            <div class="step-card bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl mr-4">♻️</span>
+                            <h3 class="text-2xl font-bold text-amber-700">Step 1: Gather Household Waste</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Collect materials that would otherwise be discarded but can be repurposed for your solar cooker:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 mb-6">
+                            <li>Cardboard boxes (for insulation and structure)</li>
+                            <li>Aluminum foil (for reflecting sunlight)</li>
+                            <li>Clear plastic bottles or glass sheets (for creating a greenhouse effect)</li>
+                            <li>Black paint or paper (for heat absorption)</li>
+                        </ul>
+                        <div class="bg-amber-100 p-4 rounded-lg">
+                            <p class="text-amber-800 text-sm"><strong>Tip:</strong> Look for clean, dry materials that can withstand outdoor conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl mr-4">🏗️</span>
+                            <h3 class="text-2xl font-bold text-blue-700">Step 2: Build Your Solar Cooker</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Construct a simple yet effective solar oven using your collected materials:
+                        </p>
+                        <ol class="list-decimal pl-5 text-gray-600 mb-6">
+                            <li>Line the inside of a cardboard box with aluminum foil (shiny side out)</li>
+                            <li>Create insulation by adding crumpled newspaper or additional cardboard layers</li>
+                            <li>Paint the cooking chamber black or line it with black paper</li>
+                            <li>Add a transparent cover (glass or plastic) to trap heat</li>
+                            <li>Create reflectors to direct more sunlight into the cooker</li>
+                        </ol>
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <p class="text-blue-800 text-sm"><strong>Design Tip:</strong> Angle the reflectors to maximize sunlight capture throughout the day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+               
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl mr-4">☀️</span>
+                            <h3 class="text-2xl font-bold text-yellow-700">Step 3: Harness Sunlight</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Position your solar cooker to maximize energy capture from the sun:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 mb-6">
+                            <li>Place in a location with direct, uninterrupted sunlight</li>
+                            <li>Angle the cooker toward the sun (adjust every 30-60 minutes)</li>
+                            <li>Use on clear days for best results (minimum 2-3 hours of cooking time)</li>
+                            <li>Optimal cooking temperatures range from 90°C to 150°C (194°F to 302°F)</li>
+                        </ul>
+                        <div class="bg-yellow-100 p-4 rounded-lg">
+                            <p class="text-yellow-800 text-sm"><strong>Timing:</strong> Best cooking occurs between 10 AM and 2 PM when the sun is highest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl mr-4">🍲</span>
+                            <h3 class="text-2xl font-bold text-orange-700">Step 4: Cook Your Food</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Prepare meals using your sustainable solar energy source:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 mb-6">
+                            <li>Use dark, shallow pots with tight-fitting lids for best heat absorption</li>
+                            <li>Ideal foods: rice, vegetables, stews, baked goods, and dehydrated foods</li>
+                            <li>Pre-cut food into smaller pieces for faster cooking</li>
+                            <li>Avoid lifting the cover frequently to maintain temperature</li>
+                        </ul>
+                        <div class="bg-orange-100 p-4 rounded-lg">
+                            <p class="text-orange-800 text-sm"><strong>Recipe Idea:</strong> Solar-cooked vegetable rice with herbs takes about 2-3 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+                
+                    <div class="md:w-1/2 p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="text-4xl mr-4">🌍</span>
+                            <h3 class="text-2xl font-bold text-emerald-700">Step 5: Enjoy Clean Energy Benefits</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Celebrate your contribution to a more sustainable future:
+                        </p>
+                        <ul class="list-disc pl-5 text-gray-600 mb-6">
+                            <li>Zero greenhouse gas emissions from cooking</li>
+                            <li>Reduced reliance on fossil fuels and electricity</li>
+                            <li>Upcycled materials that would otherwise become waste</li>
+                            <li>Educational opportunity for sustainable living practices</li>
+                            <li>Potential for food security in off-grid communities</li>
+                        </ul>
+                        <div class="bg-emerald-100 p-4 rounded-lg">
+                            <p class="text-emerald-800 text-sm"><strong>Impact:</strong> Each solar-cooked meal saves approximately 1-2 kg of CO2 emissions compared to conventional methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h2 class="text-3xl font-bold text-emerald-800 text-center mb-8">Environmental Benefits</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-amber-100 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-2">Waste Reduction</h3>
+                    <p class="text-amber-700">Repurposing household materials that would otherwise end up in landfills.</p>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">🔆</div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">Renewable Energy</h3>
+                    <p class="text-blue-700">Harnessing the infinite power of the sun instead of finite fossil fuels.</p>
+                </div>
+                <div class="bg-emerald-100 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">💨</div>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2">Zero Emissions</h3>
+                    <p class="text-emerald-700">Cooking without releasing harmful greenhouse gases or pollutants.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center py-12">
+            <h2 class="text-3xl font-bold text-emerald-800 mb-6">Ready to Start Your Solar Cooking Journey?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                Join the growing community of eco-conscious cooks who are reducing their carbon footprint one solar-cooked meal at a time.
+            </p>
+            <button onclick="scrollToTop()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-full transition-colors">
+                Begin Again ♻️
+            </button>
+        </section>
+    </main>
+
+    <footer class="bg-emerald-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-4">© 2023 Solar Cooking Initiative</p>
+                <p class="text-emerald-200">Promoting sustainable cooking practices worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll functions
+        function scrollToSteps() {
+            document.getElementById('steps').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Progress indicator update on scroll
+        window.addEventListener('scroll', function() {
+            const steps = document.querySelectorAll('.step-card');
+            const dots = document.querySelectorAll('.step-dot');
+            const progressBar = document.querySelector('.progress-bar');
+            
+            let currentStep = 0;
+            const scrollPosition = window.scrollY;
+            
+            steps.forEach((step, index) => {
+                const stepPosition = step.offsetTop;
+                if (scrollPosition >= stepPosition - 300) {
+                    currentStep = index + 1;
+                }
+            });
+            
+            // Update progress
